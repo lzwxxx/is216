@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title of our webpage, subject to change -->
+    <title>Smu Map</title>
+    <!-- Using phaser CDN, chose .min.js because apparently it preserves bandwidth. -->
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+    <link rel="icon" href="Assets/Logo/logo.png" type="image/icon type">
+    <style>
+       * {
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+            background-color: rgb(22, 22, 126);
+        }
+    </style>
+</head>
+<body>
+    <!-- div which phaser will draw canvas on -->
+    <div id="game-canvas"></div>
+    <script type="module" src="./mainscript.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="firebase_config.js"></script>
+    <script>
+        firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            //window.location.href = "game.html";
+        } else {
+            window.location.href = "index.html";
+        }
+        });
+    </script>
+</body>
+</html>

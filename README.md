@@ -1,62 +1,22 @@
-# LJPS-SPM
+IS216 Web Application Development 2
 
-Github repo link: https://github.com/yyiiinn/LJPS-SPM.git
- 
-==================
-INSTALLATION GUIDE
-==================
+G8T4 
 
-(1) set up and run a WAMP or MAMP server
+Team Members:
+Caslyn Pang Yun Shan
+Darrell Ng Kah Kiat
+Sakinah Amat Zaidi
+Lim Zhi Wei
 
-(2) execute the contents of 'lms_ljps.sql' under 'sql' folder in phpMyAdmin, i.e. at:
+**Setup & How to run this application**
+To run this application, place it into the web root
 
-       http://localhost/phpmyadmin  OR
-	   http://localhost/phpMyAdmin
+When you first load the page, you will be redirected to the login page (index.html). From there, you can choose to sign in using your Google account or click on the 'signup to get redirected to the signup page. You then can create an account using your email and password. (Requirement for Password is stated below) After signing up, you will be redirected to the game.html, where you can explore the school, play the 3 mini-games that represent some of the CCA available in SMU and take the quizzes at the different schools.
 
-(3) find your web server's root directory (e.g. C:\wamp\www) and copy the entire 'LJPS-SPM' folder inside 
-
-(4) if you don't already have Flask installed, do:
-
-	   python -m pip install flask
-	   python -m pip install flask_cors
-	   python -m pip install Flask-SQLAlchemy
-	   python -m pip install mysql-connector-python
-
-(5) in the 'LJPS-SPM' directory, run "python app.py" in a terminal.
-
-(6) go to http://localhost:5000 where the application should be working!
-
-=============
-RUNNING TESTS
-=============
-
-To run unit and integration tests, go into the 'LJPS-SPM' folder on your
-command line and do:
-
-  	python UnitTests.py
-  	python IntegrationTests.py
-
--> If you get an error message, it may be due to missing packages. Resolve
-this by doing:
-
-  	python -m pip install flask_testing
-
-for each missing package (in this case, 'flask_testing').
-
--> If you get an error message - "Your version of Flask doesn't support signals. This requires Flask 0.6+ with the blinker module installed.", resolve this by doing:
-
-  	pip install sentry-sdk[flask]
-
-
-===============
-TROUBLESHOOTING
-===============
-
-If running the Flask application gives you an error message along the lines
-of "ProgrammingError: (mysql.connector.errors.ProgrammingError) Character set
-'255' unsupported", then the following temporary 'fix' will resolve it:
-
-	   python -m pip install mysql-connector-python==0.29
-
- 
-
+**Password Requirement for Signing Up:**
+- 8 to 16 characters long 
+- At least 1 uppercase character
+- At least 1 lowercase character 
+- At least 1 special symbol
+- At least 1 digit 
+- Must not contain white spaces
